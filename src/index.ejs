@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<%
+md = require('./slide.md')
+title = md.split("\n")[0]
+%>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+</head>
+<body class="reveal">
+  <div class="slides">
+    <section data-markdown data-separator="^\n---$">
+      <script type="text/template">
+<%= md %>>
+      </script>
+    </section>
+  </div>
+</body>
+</html>
