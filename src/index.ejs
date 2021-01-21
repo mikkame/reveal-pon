@@ -2,10 +2,25 @@
 <%
 md = require('./slide.md')
 title = md.split("\n")[0]
+url = ''
+
+if (process.env.GITHUB_REPOSITORY) {
+  const [owner, repo] = process.env.GITHUB_REPOSITORY.split('/')
+  url = `https://${owner}.github.io/${repo}`
+}
+
 %>
 <html lang="en">
 <head>
   <title><%= title %></title>
+  <meta name="description" content="<%= title %>">
+  <meta property="og:title"       content="<%= title %>">
+  <meta property="og:description" content="<%= title %>">
+  <meta property="og:url"         content="<%= url %>">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- 画像を載せたい場合 -->
+  <meta property="og:image"       content="<%= url%>/preview.gif">
 </head>
 <body class="reveal">
   <div class="slides">

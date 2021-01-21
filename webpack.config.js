@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-
+const webpack = require("webpack");
 module.exports = {
     entry: './src/index.js',
     output: {
@@ -40,9 +40,13 @@ module.exports = {
         ],
     },
     plugins: [
+        new webpack.DefinePlugin({
+            'process.env.GITHUB_REPOSITORY': JSON.stringify(process.env.GITHUB_REPOSITORY)
+        }),
         new HtmlWebpackPlugin({
             filename: './index.html',
             template: './src/index.ejs'
-        })
+        }),
+
     ]
 };
