@@ -4,7 +4,7 @@
 # Feature
 
 - [x] reveal.js+webpackでスライド作成
-- [ ] GitHub でホスト(CI)
+- [x] GitHub でホスト(CI)
 - [ ] OGP作成&埋め込み
 - [ ] GIF作成
 - [ ] READMEにGIFの埋め込み
