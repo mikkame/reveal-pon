@@ -16,10 +16,12 @@ Slide Builder. Using GitHub eco system and reveal.js
 - [x] Generate Preview Gif
 - [x] Embed OGP Gif
 
-# TODO
+# Usage
 
-- [ ] Repository Template
-- [ ] Usage
+1. Click **Use this template** on GitHub
+2. edit **src/slide.md**
+3. commit and push then run ci automatically.
+4. edit README.md(optional)
 
 # License
 The source code is licensed MIT. 
