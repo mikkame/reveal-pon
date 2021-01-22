@@ -41,7 +41,7 @@ const pager= (() => {
     }
     const encoder = new GIFEncoder(800, 600);
     const stream = pngFileStream(`${__dirname}/?.png`)
-        .pipe(encoder.createWriteStream({ repeat: -1, delay: 3000, quality: 10 }))
+        .pipe(encoder.createWriteStream({ repeat: 0, delay: 3000, quality: 10 }))
         .pipe(fs.createWriteStream(`${__dirname}/../dist/preview.gif`));
     await new Promise((resolve, reject) => {
         stream.on('finish', resolve);
